@@ -10,29 +10,24 @@
 
 nav {
   display: flex;
+  width: 100vw;
   padding: 1.5rem;
   list-style-type: none;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid white;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-bottom: 2rem;
-}
-
-.route {
-  margin: 0px 2.5rem;
-  padding: 0.5rem 1rem;
-  background-color: blue;
-  font-weight: 300;
-  height: 45px;
-  text-align: center;
+  padding: 2rem 0;
+  gap: 25px;
+  position: sticky;
+  top: 0;
 }
 .contact-links {
   display: flex;
-  width: 100vw;
-  justify-content: flex-end;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-around;
+  gap: 3%;
+  margin-right: 4%;
+  width: 300px;
 }
 .contact-links a {
   background-color: #4dd4d5;
@@ -40,8 +35,10 @@ nav {
   width: 50px;
   border-radius: 100%;
   text-align: center;
+  transition: 0.25s;
 }
-.contact-links a:hover {
+.contact-links a:hover,
+.page-links a:hover {
   background-color: #008d8d;
 }
 .fa-brands,
@@ -68,4 +65,15 @@ nav {
   width: 400px;
   justify-content: space-between;
   align-items: center;
+  margin-left: 4%;
+  white-space: nowrap;
+  gap: 5px;
+}
+.page-links a {
+  padding: 3% 3%;
+  transition: 0.25s;
+  border-radius: 7px;
+}
+#hello {
+  height: 5000px;
 }
