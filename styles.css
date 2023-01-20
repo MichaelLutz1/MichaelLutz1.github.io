@@ -5,6 +5,7 @@
   font-family: "Roboto", sans-serif;
   background-color: #00c4c4;
   color: white;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -14,12 +15,17 @@ nav {
   align-items: center;
   border-bottom: 1px solid white;
   padding-left: 5rem;
+  padding-right: 5rem;
   padding-bottom: 2rem;
 }
 
 .route {
-  padding: 0px 2.5rem;
+  margin: 0px 2.5rem;
+  padding: 0.5rem 1rem;
+  background-color: blue;
   font-weight: 300;
+  height: 45px;
+  text-align: center;
 }
 .contact-links {
   display: flex;
@@ -55,4 +61,11 @@ nav {
   min-width: 60px;
   line-height: 60px;
   text-align: center;
+}
+
+.page-links {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
 }
