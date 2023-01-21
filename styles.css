@@ -7,7 +7,10 @@
   color: white;
   scroll-behavior: smooth;
 }
-
+body {
+  justify-content: center;
+  align-items: center;
+}
 nav {
   display: flex;
   width: 100vw;
@@ -15,11 +18,21 @@ nav {
   list-style-type: none;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
   padding: 2rem 0;
   gap: 25px;
   position: sticky;
   top: 0;
+  z-index: 1;
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.15);
+}
+a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .contact-links {
   display: flex;
@@ -50,16 +63,6 @@ nav {
   border-radius: 100%;
 }
 
-#main-logo {
-  color: white;
-  background-color: #ffbd25;
-  font-size: 1.5rem;
-  font-weight: bold;
-  min-width: 60px;
-  line-height: 60px;
-  text-align: center;
-}
-
 .page-links {
   display: flex;
   width: 400px;
@@ -74,6 +77,87 @@ nav {
   transition: 0.25s;
   border-radius: 7px;
 }
+.intro-card {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10rem;
+  gap: 40px;
+}
+.intro-card * {
+  background-color: inherit;
+}
+.intro-content {
+  width: 50%;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  background-color: #008d8d;
+  box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
+  border-radius: 3%;
+}
+.intro-content p {
+  font-weight: 300;
+}
+.statement {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+.statement > * {
+  margin: 0 2rem;
+}
+#pfp {
+  max-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 2rem 5rem;
+}
+#main-logo {
+  color: white;
+  background-color: #ffbd25;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 0;
+  border-radius: 0;
+}
+#content {
+  margin: 5rem 10rem;
+}
 #hello {
-  height: 5000px;
+  font-size: 4rem;
+}
+#small-seperator {
+  height: 2rem;
+  width: 5rem;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #4dd4d5;
+}
+.flip-in {
+  animation: flip-in 0.5s ease-in both;
+}
+@keyframes flip-in {
+  0% {
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+.flip-out {
+  animation: flip-out 0.5s ease-in reverse both;
+}
+@keyframes flip-out {
+  0% {
+    transform: rotateX(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
 }
