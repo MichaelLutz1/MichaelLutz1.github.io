@@ -1,11 +1,22 @@
+:root {
+  --background-color: #ebffff;
+  --darkGreen: #3fa0a0;
+  --lightGreen: #00ffff;
+  --navIconHover: #2c6d6d;
+  --grey: #d6cfcf;
+  --orange: #ffbd25;
+}
+html {
+  background-color: var(--background-color);
+  /* background-color: #00c4c4; */
+}
 * {
+  scroll-behavior: smooth;
+  color: white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #00c4c4;
-  color: white;
-  scroll-behavior: smooth;
 }
 body {
   justify-content: center;
@@ -14,17 +25,19 @@ body {
 nav {
   display: flex;
   width: 100vw;
-  padding: 1.5rem;
   list-style-type: none;
   align-items: center;
   justify-content: space-between;
-  /* border-bottom: 1px solid white; */
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   gap: 25px;
   position: sticky;
   top: 0;
   z-index: 1;
   box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.15);
+}
+nav,
+nav * {
+  background-color: var(--darkGreen);
 }
 a {
   text-decoration: none;
@@ -33,6 +46,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.anchor {
+  position: relative;
+  top: -5rem;
+  visibility: hidden;
 }
 .contact-links {
   display: flex;
@@ -43,16 +61,19 @@ a {
   width: 300px;
 }
 .contact-links a {
-  background-color: #4dd4d5;
   height: 50px;
   width: 50px;
   border-radius: 100%;
   text-align: center;
   transition: 0.25s;
+  background-color: var(--orange);
+}
+.page-links a:hover {
+  background-color: var(--navIconHover);
 }
 .contact-links a:hover,
-.page-links a:hover {
-  background-color: #008d8d;
+#main-logo:hover {
+  background-color: #ae8119;
 }
 .fa-brands,
 .fa-regular {
@@ -88,10 +109,11 @@ a {
 }
 .intro-content {
   width: 50%;
+  max-width: 380px;
   text-align: center;
   flex-direction: column;
   padding: 2rem 0;
-  background-color: #008d8d;
+  background-color: var(--darkGreen);
   box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
   border-radius: 3%;
 }
@@ -107,14 +129,15 @@ a {
   margin: 0 2rem;
 }
 #pfp {
-  max-width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   border-radius: 50%;
-  margin: 2rem 5rem;
+  aspect-ratio: 1;
+  margin-bottom: 2rem;
 }
 #main-logo {
   color: white;
-  background-color: #ffbd25;
+  background-color: var(--orange);
   font-size: 1.5rem;
   font-weight: bold;
   min-width: 60px;
@@ -127,14 +150,25 @@ a {
   margin: 5rem 10rem;
 }
 #hello {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 #small-seperator {
   height: 2rem;
   width: 5rem;
   margin-bottom: 15px;
-  border-bottom: 3px solid #4dd4d5;
+  border-bottom: 3px solid var(--orange);
 }
+#about {
+  margin: 5rem 0;
+  background-color: var(--darkGreen);
+  box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+}
+#about * {
+  padding: 2rem;
+}
+
+/* hello animation */
 .flip-in {
   animation: flip-in 0.5s ease-in both;
 }
