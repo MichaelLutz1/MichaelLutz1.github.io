@@ -1,16 +1,16 @@
 :root {
   --background-color: #e3fefe;
-  --darkGreen: #3fa0a0;
-  --lightGreen: #00ffff;
+  --themeColor: #00c5c5;
   --navIconHover: #2c6d6d;
   --grey: #d6cfcf;
   --orange: #ffbd25;
   --fontColor: white;
-  --themeColor: rgb(115, 115, 115);
+  --iconColor: grey;
 }
 [theme="dark"] {
   --background-color: #034949;
-  --themeColor: white;
+  --themeColor: #3fa0a0;
+  --iconColor: white;
 }
 
 html {
@@ -43,7 +43,7 @@ nav {
 }
 nav,
 nav * {
-  background-color: var(--darkGreen);
+  background-color: var(--themeColor);
 }
 a {
   text-decoration: none;
@@ -111,7 +111,7 @@ a {
   font-size: 10px;
   top: 22%;
   background-color: inherit;
-  color: var(--themeColor);
+  color: var(--iconColor);
 }
 .darkmode-container .fa-moon {
   left: 5px;
@@ -181,7 +181,7 @@ a {
   text-align: center;
   flex-direction: column;
   padding: 2rem 0;
-  background-color: var(--darkGreen);
+  background-color: var(--themeColor);
   box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
   border-radius: 3%;
 }
@@ -197,7 +197,7 @@ a {
   margin: 0 2rem;
 }
 .project {
-  background-color: var(--darkGreen);
+  background-color: var(--themeColor);
   justify-content: flex-start;
   align-items: flex-start;
   box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
@@ -264,7 +264,7 @@ a {
   border-radius: 0;
 }
 #content {
-  margin: 4.6rem 10rem;
+  margin: 10% 10rem;
 }
 #hello {
   font-size: 2.2rem;
@@ -277,7 +277,7 @@ a {
 }
 #about {
   margin-bottom: 5rem;
-  background-color: var(--darkGreen);
+  background-color: var(--themeColor);
   box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
 }
