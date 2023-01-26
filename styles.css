@@ -5,7 +5,7 @@
   --grey: #d6cfcf;
   --orange: #ffbd25;
   --fontColor: white;
-  --iconColor: grey;
+  --iconColor: #d79600;
 }
 [theme="dark"] {
   --background-color: #034949;
