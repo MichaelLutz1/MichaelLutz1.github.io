@@ -34,9 +34,9 @@ const toggleSwitch = document.querySelector("#darkmode-checkbox");
 
 function switchTheme(e) {
   if (e.target.checked) {
-    document.documentElement.setAttribute("theme", "dark");
-  } else {
     document.documentElement.setAttribute("theme", "light");
+  } else {
+    document.documentElement.setAttribute("theme", "dark");
   }
 }
 
