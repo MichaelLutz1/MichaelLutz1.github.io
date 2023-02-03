@@ -25,6 +25,7 @@ html {
   font-family: "Roboto", sans-serif;
 }
 body {
+  overflow-x: hidden;
   background: var(--background);
   justify-content: center;
   align-items: center;
