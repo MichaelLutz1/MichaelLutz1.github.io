@@ -1,16 +1,16 @@
 const hellos = [
-  "Hola!",
-  "Bonjour!",
-  "Namaste!",
-  "Nǐn hǎo!",
-  "Guten tag!",
-  "Ciao!",
-  "Anyoung!",
-  "Olá!",
-  "Privet!",
-  "G'day!",
-  "Shalom!",
-  "Hello!",
+  "Hola,",
+  "Bonjour,",
+  "Namaste,",
+  "Nǐn hǎo,",
+  "Guten tag,",
+  "Ciao,",
+  "Annyeong,",
+  "Olá,",
+  "Privet,",
+  "G'day,",
+  "Shalom,",
+  "Hello,",
 ];
 
 const hello = document.getElementById("hello");

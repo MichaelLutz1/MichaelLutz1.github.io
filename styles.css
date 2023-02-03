@@ -1,6 +1,6 @@
 :root {
-  --background: #d3e9e9;
-  --themeColor: #2a7998;
+  --background: #dcf1f1;
+  --themeColor: #367994;
   --navIconHover: #213a53;
   --grey: #d6cfcf;
   --orange: #ffbd25;
@@ -8,11 +8,7 @@
   --iconColor: #d79600;
 }
 [theme="dark"] {
-  --background: radial-gradient(
-    ellipse at 50% 54%,
-    rgba(144, 170, 198, 1) 0%,
-    rgba(99, 102, 115, 1) 100%
-  );
+  --background: rgb(32, 34, 44);
   --themeColor: #4975a1;
   --iconColor: white;
 }
@@ -259,17 +255,38 @@ footer ul {
 .project-description i:hover {
   transform: scale(1.1);
 }
+.current-project {
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+}
+.current-project > * {
+  margin: 10px 8%;
+}
+.current-project h1 {
+  text-align: center;
+  border-bottom: 3px solid var(--orange);
+}
+.current-project i {
+  height: 25px;
+  width: 25px;
+  transition: 0.25s;
+}
+.current-project i:hover {
+  transform: scale(1.1);
+}
 .language-container {
   width: 100%;
   text-align: center;
 }
 .language {
   background-color: var(--navIconHover);
-  padding: 2%;
+  padding: 10px;
   border-radius: 20px;
   margin: 0 2%;
   font-weight: 300;
   transition: 0.25s;
+  text-align: center;
 }
 .language:hover {
   transform: scale(1.1);
@@ -296,6 +313,9 @@ footer ul {
 }
 #content {
   margin: 4rem 10rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #hello {
   font-size: 2.2rem;
@@ -311,6 +331,7 @@ footer ul {
   background-color: var(--themeColor);
   box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
+  width: 80%;
 }
 #about * {
   padding: 2rem;
