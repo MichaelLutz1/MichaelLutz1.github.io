@@ -232,6 +232,17 @@ footer ul {
 .project p {
   text-align: center;
 }
+.project-header {
+  text-align: center;
+  border-bottom: 3px solid var(--orange);
+  margin-top: 5%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.project-header:hover {
+  cursor: pointer;
+  color: #213a53;
+}
 .project-image {
   max-width: 50%;
   border-radius: 10px 0 0 10px;
@@ -242,16 +253,17 @@ footer ul {
 }
 .project-description > * {
   margin: 2% 8% 5px;
+  text-align: center;
 }
 .project-description h1 {
-  text-align: center;
   border-bottom: 3px solid var(--orange);
   margin-top: 5%;
 }
 .project-description i {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   transition: 0.25s;
+  line-height: 30px;
 }
 .project-description i:hover {
   transform: scale(1.1);
@@ -333,9 +345,10 @@ footer ul {
   box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
   width: 80%;
+  padding: 1rem 0;
 }
 #about * {
-  padding: 2rem;
+  padding: 1rem 3rem;
 }
 
 /* hello animation */
