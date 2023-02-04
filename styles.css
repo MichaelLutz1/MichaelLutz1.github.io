@@ -232,7 +232,7 @@ footer ul {
 .project p {
   text-align: center;
 }
-.project-header {
+.project-description > .project-header {
   text-align: center;
   border-bottom: 3px solid var(--orange);
   margin-top: 5%;
