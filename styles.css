@@ -378,3 +378,21 @@ footer ul {
     opacity: 1;
   }
 }
+
+@media (max-width: 1500px) {
+  #content {
+    margin: 4rem 1rem 6rem;
+  }
+  .intro-card {
+    flex-direction: column;
+    margin: 0;
+  }
+  .intro-content {
+    width: 100%;
+    max-width: 750px;
+  }
+  .statement {
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+}
