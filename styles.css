@@ -15,6 +15,7 @@
 
 html {
   background-color: var(--themeColor);
+  overflow-x: hidden;
 }
 * {
   scroll-behavior: smooth;
@@ -25,7 +26,6 @@ html {
   font-family: "Roboto", sans-serif;
 }
 body {
-  overflow-x: hidden;
   background: var(--background);
   justify-content: center;
   align-items: center;
@@ -325,6 +325,7 @@ footer ul {
   border-radius: 0;
 }
 #content {
+  width: 100vw;
   margin: 4rem 10rem 6rem;
   display: flex;
   flex-direction: column;
