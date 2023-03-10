@@ -389,6 +389,9 @@ footer ul {
     flex-direction: column;
     margin: 0;
   }
+  .intro-card * {
+    text-align: center;
+  }
   .intro-content {
     width: 100%;
     max-width: 750px;
@@ -411,5 +414,18 @@ footer ul {
   }
   #about {
     width: 100%;
+  }
+  .project {
+    flex-direction: column;
+  }
+  .project-image {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0px;
+  }
+  .project-description > a {
+    margin-bottom: 3rem;
+  }
+  #pokemon-links {
+    margin-bottom: 3rem;
   }
 }
