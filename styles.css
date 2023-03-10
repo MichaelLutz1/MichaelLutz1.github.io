@@ -342,7 +342,7 @@ footer ul {
   border-bottom: 3px solid var(--orange);
 }
 #about {
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
   background-color: var(--themeColor);
   box-shadow: -3px 2px 14px 5px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
