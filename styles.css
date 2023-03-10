@@ -423,10 +423,10 @@ footer ul {
     border-radius: 10px 10px 0 0px;
   }
   .project-description > a {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
   #pokemon-links {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
   .darkmode-container > label::after {
     transition: 0s;
