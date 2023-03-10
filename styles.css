@@ -428,4 +428,7 @@ footer ul {
   #pokemon-links {
     margin-bottom: 3rem;
   }
+  .darkmode-container > label::after {
+    transition: 0s;
+  }
 }
