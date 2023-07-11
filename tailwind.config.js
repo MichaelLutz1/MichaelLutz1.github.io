@@ -3,9 +3,9 @@ export default {
   content: ["./index.html", "./*.{js,ts}"],
   theme: {
     fontFamily: {
-      sans: ["belanosima"],
-      title: ["Lobster"],
-      about: ["Bebas Neue"],
+      sans: ["Akatab"],
+      title: ["Fugaz One"],
+      subtitle: ["belanosima"],
     },
     extend: {
       animation: {
