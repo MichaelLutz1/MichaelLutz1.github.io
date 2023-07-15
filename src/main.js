@@ -1,7 +1,6 @@
 // import * as THREE from "three";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Email } from "./js/smtp.js";
 
 AOS.init();
 
@@ -9,7 +8,7 @@ const name = document.getElementById("vanta-bg");
 const typingText = document.querySelector("#typing-text");
 const navBar = document.querySelector("#nav-bar");
 const form = document.querySelector("#email-form");
-form.addEventListener("submit", handleEmail);
+//form.addEventListener("submit", handleEmail);
 
 //VANTA.FOG({
 //  el: name,
@@ -74,31 +73,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-async function handleEmail(e) {
-  e.preventDefault();
-  const name = document.querySelector("#email-name");
-  const email = document.querySelector("#email-email");
-  const message = document.querySelector("#email-message");
-  try {
-    const content = {
-      subject: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    const res = await Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "mikelutz2400@gmail.com",
-      Password: "A57D487B4F8169A6A4A3BEB928F450D58FEB",
-      To: "mplutz@udel.edu",
-      From: content.email,
-      Subject: "This is the subject",
-      Body: "And this is the body",
-    });
-    console.log(res);
-  } catch (error) {
-    console.log("Error Occured ---", error);
-  }
-}
+// async function handleEmail(e) {
+//   e.preventDefault();
+//   const name = document.querySelector("#email-name");
+//   const email = document.querySelector("#email-email");
+//   const message = document.querySelector("#email-message");
+//   try {
+//     const content = {
+//       subject: name.value,
+//       email: email.value,
+//       message: message.value,
+//     };
+//   } catch (error) {
+//     console.log("Error Occured ---", error);
+//   }
+// }
 
 let titleIndex = 0;
 function typeText(element, speed, str, delay) {
