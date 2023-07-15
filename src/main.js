@@ -1,5 +1,5 @@
 // import * as THREE from "three";
-import AOS from "aos";
+import AOS from "../node_modules/aos/dist/aos";
 import "aos/dist/aos.css";
 
 AOS.init();
