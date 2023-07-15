@@ -1,13 +1,16 @@
-import FOG from "vanta/dist/vanta.fog.min";
+import FOG from "../node_modules/vanta/dist/vanta.fog.min.js";
 import * as THREE from "three";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
+import { Email } from "./js/smtp.js";
 
 AOS.init();
 
 const name = document.getElementById("vanta-bg");
 const typingText = document.querySelector("#typing-text");
 const navBar = document.querySelector("#nav-bar");
+const form = document.querySelector("#email-form");
+form.addEventListener("submit", handleEmail);
 
 FOG({
   el: name,
@@ -21,7 +24,7 @@ FOG({
   midtoneColor: 0x434343,
   lowlightColor: 0x0,
   baseColor: 0x0,
-  blurFactor: 0.6,
+  blurFactor: 0.8,
 });
 
 const names = [
@@ -32,15 +35,6 @@ const names = [
   "Dawg",
   "The Wicked Witch of the West",
 ];
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    } else {
-      entry.target.classList.remove("show");
-    }
-  });
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
@@ -49,9 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const loadingScreen = document.querySelector("#loader");
   loadingScreen.style.display = "none";
-
-  const hiddenItems = document.querySelectorAll(".hide");
-  hiddenItems.forEach((el) => observer.observe(el));
 
   const navItems = document.querySelectorAll(".nav-item");
   navItems.forEach((item) => {
@@ -66,7 +57,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const arrow = document.querySelector(".down-arrow");
   arrow.classList.add("down-arrow-active");
+
+  const projects = document.querySelectorAll(".project");
+  projects.forEach((project) => {
+    const leftCard = project.querySelector(".left-card");
+    const rightCard = project.querySelector(".right-card");
+    project.addEventListener("click", () => {
+      leftCard.classList.add("animate-shuffleLeft");
+      leftCard.classList.toggle("opacity-60");
+      setTimeout(() => {
+        leftCard.classList.toggle("z-10");
+      }, 500);
+      setTimeout(() => {
+        leftCard.classList.remove("animate-shuffleLeft");
+      }, 1000);
+      rightCard.classList.add("animate-shuffleRight");
+      setTimeout(() => {
+        rightCard.classList.toggle("z-10");
+      }, 500);
+      rightCard.classList.toggle("opacity-60");
+      setTimeout(() => {
+        rightCard.classList.remove("animate-shuffleRight");
+      }, 1000);
+    });
+  });
 });
+async function handleEmail(e) {
+  e.preventDefault();
+  const name = document.querySelector("#email-name");
+  const email = document.querySelector("#email-email");
+  const message = document.querySelector("#email-message");
+  try {
+    const content = {
+      subject: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    const res = await Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "mikelutz2400@gmail.com",
+      Password: "A57D487B4F8169A6A4A3BEB928F450D58FEB",
+      To: "mplutz@udel.edu",
+      From: content.email,
+      Subject: "This is the subject",
+      Body: "And this is the body",
+    });
+    console.log(res);
+  } catch (error) {
+    console.log("Error Occured ---", error);
+  }
+}
 
 let titleIndex = 0;
 function typeText(element, speed, str, delay) {
