@@ -1,5 +1,4 @@
-import { VANTA } from "vanta";
-import * as THREE from "three";
+// import * as THREE from "three";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Email } from "./js/smtp.js";
@@ -27,14 +26,7 @@ form.addEventListener("submit", handleEmail);
 //  blurFactor: 0.8,
 //});
 
-const names = [
-  "Pirate",
-  "Scarecrow",
-  "Lion",
-  "Tin Man",
-  "Dawg",
-  "The Wicked Witch of the West",
-];
+const names = ["Pirate", "Scarecrow", "Lion", "Tin Man", "Dawg", "The Wicked Witch of the West"];
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
@@ -164,8 +156,7 @@ function elementInView(e) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
