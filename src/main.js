@@ -1,4 +1,4 @@
-import FOG from "../node_modules/vanta/dist/vanta.fog.min.js";
+import { VANTA } from "vanta";
 import * as THREE from "three";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -12,20 +12,20 @@ const navBar = document.querySelector("#nav-bar");
 const form = document.querySelector("#email-form");
 form.addEventListener("submit", handleEmail);
 
-FOG({
-  el: name,
-  THREE,
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.0,
-  minWidth: 200.0,
-  highlightColor: 0x707070,
-  midtoneColor: 0x434343,
-  lowlightColor: 0x0,
-  baseColor: 0x0,
-  blurFactor: 0.8,
-});
+//VANTA.FOG({
+//  el: name,
+//  THREE,
+//  mouseControls: true,
+//  touchControls: true,
+//  gyroControls: false,
+//  minHeight: 200.0,
+//  minWidth: 200.0,
+//  highlightColor: 0x707070,
+//  midtoneColor: 0x434343,
+// lowlightColor: 0x0,
+//  baseColor: 0x0,
+//  blurFactor: 0.8,
+//});
 
 const names = [
   "Pirate",
