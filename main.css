@@ -101,7 +101,7 @@ nav {
     @apply aspect-square relative border-purple-400 border-2 rounded-lg shadow-md shadow-purple-400 hover:scale-105 transition-all;
   }
   .skill-svg {
-    @apply h-12 sm:h-16 md:h-20 lg:h-24 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 fill-white  stroke-2;
+    @apply h-12 h-8 sm:h-16 md:h-20 lg:h-24 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 fill-white  stroke-2;
   }
   .project {
     @apply relative h-[30rem] py-72;
