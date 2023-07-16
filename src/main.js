@@ -26,7 +26,7 @@ FOG({
 });
 
 const names = [
-  "Computer Science Student",
+  "CS Student",
   "Problem Solver",
   "Tech Enthusiast",
   "Web Developer",
