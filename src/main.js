@@ -1,5 +1,6 @@
-// import * as THREE from "three";
-import AOS from "../node_modules/aos/dist/aos";
+import FOG from "vanta/dist/vanta.fog.min";
+import * as THREE from "three";
+import AOS from "aos";
 import "aos/dist/aos.css";
 
 AOS.init();
@@ -8,24 +9,28 @@ const name = document.getElementById("vanta-bg");
 const typingText = document.querySelector("#typing-text");
 const navBar = document.querySelector("#nav-bar");
 const form = document.querySelector("#email-form");
-//form.addEventListener("submit", handleEmail);
 
-//VANTA.FOG({
-//  el: name,
-//  THREE,
-//  mouseControls: true,
-//  touchControls: true,
-//  gyroControls: false,
-//  minHeight: 200.0,
-//  minWidth: 200.0,
-//  highlightColor: 0x707070,
-//  midtoneColor: 0x434343,
-// lowlightColor: 0x0,
-//  baseColor: 0x0,
-//  blurFactor: 0.8,
-//});
+FOG({
+  el: name,
+  THREE,
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.0,
+  minWidth: 200.0,
+  highlightColor: 0x707070,
+  midtoneColor: 0x434343,
+  lowlightColor: 0x0,
+  baseColor: 0x0,
+  blurFactor: 0.8,
+});
 
-const names = ["Pirate", "Scarecrow", "Lion", "Tin Man", "Dawg", "The Wicked Witch of the West"];
+const names = [
+  "Computer Science Student",
+  "Problem Solver",
+  "Tech Enthusiast",
+  "Web Developer",
+];
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
@@ -53,7 +58,25 @@ document.addEventListener("DOMContentLoaded", () => {
   projects.forEach((project) => {
     const leftCard = project.querySelector(".left-card");
     const rightCard = project.querySelector(".right-card");
-    project.addEventListener("click", () => {
+    rightCard.addEventListener("click", () => {
+      leftCard.classList.add("animate-shuffleLeft");
+      leftCard.classList.toggle("opacity-60");
+      setTimeout(() => {
+        leftCard.classList.toggle("z-10");
+      }, 500);
+      setTimeout(() => {
+        leftCard.classList.remove("animate-shuffleLeft");
+      }, 1000);
+      rightCard.classList.add("animate-shuffleRight");
+      setTimeout(() => {
+        rightCard.classList.toggle("z-10");
+      }, 500);
+      rightCard.classList.toggle("opacity-60");
+      setTimeout(() => {
+        rightCard.classList.remove("animate-shuffleRight");
+      }, 1000);
+    });
+    leftCard.addEventListener("click", () => {
       leftCard.classList.add("animate-shuffleLeft");
       leftCard.classList.toggle("opacity-60");
       setTimeout(() => {
@@ -73,21 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-// async function handleEmail(e) {
-//   e.preventDefault();
-//   const name = document.querySelector("#email-name");
-//   const email = document.querySelector("#email-email");
-//   const message = document.querySelector("#email-message");
-//   try {
-//     const content = {
-//       subject: name.value,
-//       email: email.value,
-//       message: message.value,
-//     };
-//   } catch (error) {
-//     console.log("Error Occured ---", error);
-//   }
-// }
 
 let titleIndex = 0;
 function typeText(element, speed, str, delay) {
@@ -106,7 +114,7 @@ function typeText(element, speed, str, delay) {
     } else {
       clearInterval(interval);
       setTimeout(() => {
-        deleteText(element, speed - 100, str, delay);
+        deleteText(element, speed - 140, str, delay);
       }, delay);
     }
   }, speed);
@@ -120,7 +128,7 @@ function deleteText(element, speed, str, delay) {
     } else {
       clearInterval(interval);
       setTimeout(() => {
-        typeText(element, speed + 100, str, delay);
+        typeText(element, speed + 140, str, delay);
       }, delay);
     }
   }, speed);
@@ -145,7 +153,8 @@ function elementInView(e) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
