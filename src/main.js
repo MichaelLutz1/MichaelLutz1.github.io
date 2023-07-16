@@ -12,7 +12,7 @@ const form = document.querySelector("#email-form");
 
 FOG({
   el: name,
-  THREE,
+  THREE: THREE,
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
