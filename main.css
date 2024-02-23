@@ -122,6 +122,6 @@ nav {
     @apply absolute w-full border-2 bottom-0 opacity-40 rounded-lg;
   }
   .contact-icon {
-    @apply fill-white h-6 md:h-8 hover:scale-110 transition-all;
+    @apply fill-white h-10 md:h-14 hover:scale-110 transition-all;
   }
 }

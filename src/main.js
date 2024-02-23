@@ -1,5 +1,5 @@
-import FOG from "vanta/dist/vanta.fog.min";
 import * as THREE from "three";
+import FOG from "vanta/dist/vanta.fog.min.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
